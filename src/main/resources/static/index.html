@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的 AI 助手</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1 class="app-title">我的 AI 助手</h1>
+      <p class="app-subtitle">由 DeepSeek 提供智能回答</p>
+    </header>
+
+    <main id="chat" class="chat">
+      <div class="msg msg-ai">
+        <div class="msg-bubble">你好！我是你的 AI 助手，有什么问题都可以问我。</div>
+      </div>
+    </main>
+
+    <footer class="input-bar">
+      <textarea id="input" class="input" rows="1" placeholder="请输入你想咨询的问题……"></textarea>
+      <button id="send" class="send-btn">发送</button>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,13 +1,22 @@
 
 package com.itheima.javaaiassistan.service;
 
+import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ChatService {
 
+    private final ChatClient chatClient;
+
+    public ChatService(ChatClient.Builder chatClientBuilder) {
+        this.chatClient = chatClientBuilder.build();
+    }
+
     public String chat(String message) {
-        // 当前先模拟 AI 回复，后续替换为真实 AI 模型调用
-        return "你提出的问题是：" + message;
+        return chatClient.prompt()
+                .user(message)
+                .call()
+                .content();
     }
 }
